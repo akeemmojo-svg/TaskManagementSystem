@@ -5,7 +5,8 @@ namespace Milestone03_LayeredConsole.Repositories
 {
     public class JsonTaskRepository
     {
-        private readonly string filePath = "tasks.json";
+        private readonly string filePath =
+     Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "tasks.json");
 
         public List<TaskItem> LoadTasks()
         {

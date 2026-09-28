@@ -5,7 +5,8 @@ namespace Milestone03_LayeredConsole.Repositories
 {
     public class JsonUserRepository
     {
-        private readonly string filePath = "users.json";
+        private readonly string filePath =
+     Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "users.json");
 
         public List<User> LoadUsers()
         {
